@@ -1,0 +1,36 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+.myButton {
+	box-shadow:inset 0px 1px 3px 0px #141414;
+	background:linear-gradient(to bottom, #ffffff 5%, #000000 100%);
+	background-color:#ffffff;
+	border-radius:5px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #46615d;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #000000 5%, #ffffff 100%);
+	background-color:#000000;
+	text-decoration:none;
+	color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+	text-decoration:none;
+	color:#ffffff;
+}
