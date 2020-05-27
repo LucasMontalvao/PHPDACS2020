@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-   $con = mysqli_connect("localhost","bob","bob","univille");
+   include 'dbconnect.php';
    $sql = "select * from cliente";
 	 $result = mysqli_query($con,$sql);
 ?>
@@ -28,7 +28,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Front end é um saco</a>
+      <a class="navbar-brand" href="#">Cadastro de clientes</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -79,7 +79,7 @@
 				   	   	  echo "<td>" . $row[2] . "</td>";
 				   	   	  ?>
 				   	   	  <td><a href="clientpage.php?id=<?php echo $row[0]?>" class="btn btn-dark">Edit</a></td>
-				   	   	  <td><a href="deletecliente.php?id=<?php echo $row[0]?>" class="btn btn-dark">Excluir</a></td>
+				   	   	  <td><a href="#" onclick="apagar(<?php echo $row[0]?>)" class="btn btn-dark">Excluir</a></td>
 				   	   	  <?php
 				   	   echo "</tr>";
             }
@@ -101,6 +101,13 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+            function apagar(id){               
+                if(window.confirm("Essa ação não poderia ser desfeita, deseja excluir? ")){
+                    window.location = "deletecliente.php?id=" + id;
+                }               
+            }       
+        </script>
 
 </body>
 

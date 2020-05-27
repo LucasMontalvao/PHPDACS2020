@@ -1,5 +1,5 @@
 <?php
-    $con = mysqli_connect("localhost","bob","bob","univille");
+    include 'dbconnect.php';
     $deleteStatement = "delete from cliente where codigo = ?";
     
     $statement = mysqli_prepare($con, $deleteStatement);

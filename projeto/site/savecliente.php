@@ -1,6 +1,7 @@
 <?php
-	 $con = mysqli_connect("localhost","bob","bob","univille");
-	if($_POST['codigo'] != null){
+	 include 'dbconnect.php';
+	 $codigo = $_POST['codigo'];
+	if($codigo != null){
 		$update = "update cliente set nome = ?, endereco = ? where codigo = ?";
 		$stmt = mysqli_prepare($con, $update);
 
