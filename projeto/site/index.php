@@ -72,9 +72,6 @@
         </thead>
         <tbody>
           <?php
-            var_dump($sql);
-            var_dump($con);
-            var_dump($result);
             while($row = $result->fetch_row()){
 				       echo "<tr>";
 				   	   	  echo "<td>" . $row[0] . "</td>";
