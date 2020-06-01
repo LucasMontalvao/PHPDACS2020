@@ -1,16 +1,11 @@
-
-CREATE DATABASE IF NOT EXISTS 'univille';
-GRANT ALL PRIVILEGES ON univille.* TO 'bob'@'localhost' WITH GRANT OPTION;
-
-flush privileges;
-
-
 use univille;
-
-create database if not EXISTS 'cliente'( 
-    'codigo' int(11) primary key auto_increment,
-    'nome' varchar(100),
-    'endereco' varchar(100)
+CREATE TABLE `cliente` (
+  `codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) DEFAULT NULL,
+  `endereco` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`codigo`)
 );
 
-insert into 'cliente'(nome,endereco) values('Lucas','Muito longe');
+GRANT ALL PRIVILEGES ON univille.* TO 'root'@'%' WITH GRANT OPTION; 
+FLUSH PRIVILEGES;
+insert into cliente(nome,endereco) values('Lucas','Muito longe');
